@@ -9,8 +9,6 @@ Scrapping data from a website using python
 
 The objective is to scrap data from https://www.carrefour.fr/promotions for all promotion pages and start analysing the promotions of the brand.
 
-![Carrefour Logo](https://upload.wikimedia.org/wikipedia/fr/thumb/3/3b/Logo_Carrefour.svg/1200px-Logo_Carrefour.svg.png)
-
 
 ## Process followed
 

@@ -14,12 +14,15 @@ The objective is to scrap data from https://www.carrefour.fr/promotions for all 
 
 ### Librairies used
 
+- math
 - requests
 - json
 - pandas
 - bs4
 - os
 - time
+- matplotlib.pyplot
+- seaborn 
 
 ### Steps
 
@@ -35,3 +38,6 @@ The objective is to scrap data from https://www.carrefour.fr/promotions for all 
 - A dataframe analysing the number of promotions per category and subcategory
 - The number of products on the promotion page having the same price as before being promoted
 - 2 graphs: the promotions per subcategory and the top 10 brands promoting products on Carrefour.
+
+![Graph_categories](https://github.com/Camillelib/Web_Scrapping_project/blob/master/Output/Promotions%20per%20subcategory.png?raw=true)
+![Graph_brands](https://github.com/Camillelib/Web_Scrapping_project/blob/master/Output/Promotion%20per%20brands%20(Top%2010).png?raw=true)

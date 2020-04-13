@@ -98,8 +98,8 @@ def pages_number_promotions(url):
 #Scrapping pages
 def scrapping_products():
     df_final=pd.DataFrame()
-    for i in range(n+1):
-        url=f'https://www.carrefour.fr/r/{cat_name}?noRedirect=1&page={i}'
+    for i in range(n):
+        url=f'https://www.carrefour.fr/r/{cat_name}?noRedirect=1&page={i+1}'
         headers=f"""accept: application/json, text/plain, */*
         accept-encoding: gzip, deflate, br
         accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
@@ -107,7 +107,7 @@ def scrapping_products():
         cookie: TCPID=119551614271772534656; _ga=GA1.2.1334375845.1556892869; cookieIDCrfOne=V12019531614280.2021166067845266; TC_OPTOUT=0@@@@@@ALL; already_visitedOne=1; visid_incap_1982952=0RjOMFJXRuKKO5znr4FgKeRMzFwAAAAAQUIPAAAAAAD6n2mvQU/sqwDmJkARHJBk; tc_cj_v2=m_iZZZ%22**%22%27%20ZZZKOOPRSLRPQNRRZZZ%5D777_rn_lh%5BfyfcheZZZ222H.*-/%24-%7B+%7B-%24.H%7D*%28ZZZKOOQLKRRRQLLMZZZ%5D777m_iZZZ%22**%22%27%20ZZZKOQRKMKMSQNRKZZZ%5D; datadome=MV~uTOOCnVIzfg.ULn2qjQwiYrYCKiCPqVlIXhkojIZNBB1zJzAjb_LCHT2CCYufdPeKF5Omu7~Z9jwshB52Hgn-fgLks.1wkrj4LccckQ; _cs_c=0; _cs_id=9566bfd8-1a78-a240-f0bb-e8015b3551ba.1556892869.3.1578131399.1578131399.1.1591056869072; visid_incap_441619=vrnUei+7RLiL2Xr3UUmTzfgij14AAAAAQUIPAAAAAABOtZUZlXTnCzjXe1PMdHUQ; visid_incap_1722501=z8YspOTjRLmNxY1jMdqc2voij14AAAAAQUIPAAAAAAAz5k9o0TPe5INp8+VLBGMZ; FRONTONE_USER=1589030911; FRONTONE_SESSID=b63750e3dfbafa4034d6cf3e8d2d558c; FRONTONE_SESSION_ID=e63380316c097c37050207ec718741fff9259edc; nlbi_441619=hPsnDNGFBgcuMoocJv8P3AAAAADvRtLIitBw0DCDaulsolSv; incap_ses_766_441619=xOrCJJ75ZFMuHdRpFmKhCqARk14AAAAAAbkGgZaI3ZwKzWSE9YLNdw==; incap_ses_766_1722501=V7G5dFZNVT+iJNRpFmKhCrsRk14AAAAAXCoyqmHLrIAbZR4ql84New==; QueueITAccepted-SDFrts345E-V3_prodevent=EventId%3Dprodevent%26QueueId%3D353322c4-4a85-4736-95aa-c51441010113%26RedirectType%3Dsafetynet%26IssueTime%3D1586696637%26Hash%3Df43739e176b3b7aaa718bb08ec22f99ce1e1414fc95bb20a6472efd106b12563; visid_incap_2237321=MIUgPDc1SUulJogUgHnXuewRk14AAAAAQUIPAAAAAACC1NtTLjWHs8UOS/4WjTEn; incap_ses_766_2237321=r+MCOZqfWyiAMtRpFmKhCuwRk14AAAAA3H8Vhks4p1T4AV7SEIzY0A==; ABTasty=uid%3D20041215043664510%26fst%3D1586696676950%26pst%3Dnull%26cst%3D1586696676950%26ns%3D1%26pvt%3D18%26pvis%3D18%26th%3D562227.699323.18.18.1.1.1586696677071.1586696730088.1_573142.710608.17.17.1.1.1586696677090.1586696730101.1_575385.713246.17.17.1.1.1586696677179.1586696730128.1; ab-popin_solutions=1; ABTastySession=sen%3D110__referrer%3Dhttps%3A//www.carrefour.fr/r%3Ffilters%255Bproduct.categories.name%255D%255B0%255D%3DEntretien%2520et%2520nettoyage%26noRedirect%3D0__landingPage%3Dhttps%3A//www.carrefour.fr/r/alcools-et-produits-aperitifs__referrerSent%3Dtrue; ADRUM=s=1586696878563&r=https%3A%2F%2Fwww.carrefour.fr%2Fboutique%2Fparapharmacie%3F0; pageCounterCrfOne=46
         dnt: 1
         pragma: no-cache
-        referer: https://www.carrefour.fr/r/{cat_name}?noRedirect=1&page={i}
+        referer: https://www.carrefour.fr/r/{cat_name}?noRedirect=1&page={i+1}
         sec-fetch-dest: empty
         sec-fetch-mode: cors
         sec-fetch-site: same-origin
@@ -125,8 +125,8 @@ def scrapping_products():
 #Scrapping pages
 def scrapping_promotions():
     df_final=pd.DataFrame()
-    for i in range(n+1):
-        url=f"https://www.carrefour.fr/promotions?noRedirect=0&page={i}"
+    for i in range(n):
+        url=f"https://www.carrefour.fr/promotions?noRedirect=0&page={i+1}"
         headers=f"""accept: application/json, text/plain, */*
         accept-encoding: gzip, deflate, br
         accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
@@ -134,7 +134,7 @@ def scrapping_promotions():
         cookie: TCPID=119551614271772534656; _ga=GA1.2.1334375845.1556892869; cookieIDCrfOne=V12019531614280.2021166067845266; TC_OPTOUT=0@@@@@@ALL; already_visitedOne=1; visid_incap_1982952=0RjOMFJXRuKKO5znr4FgKeRMzFwAAAAAQUIPAAAAAAD6n2mvQU/sqwDmJkARHJBk; tc_cj_v2=m_iZZZ%22**%22%27%20ZZZKOOPRSLRPQNRRZZZ%5D777_rn_lh%5BfyfcheZZZ222H.*-/%24-%7B+%7B-%24.H%7D*%28ZZZKOOQLKRRRQLLMZZZ%5D777m_iZZZ%22**%22%27%20ZZZKOQRKMKMSQNRKZZZ%5D; datadome=MV~uTOOCnVIzfg.ULn2qjQwiYrYCKiCPqVlIXhkojIZNBB1zJzAjb_LCHT2CCYufdPeKF5Omu7~Z9jwshB52Hgn-fgLks.1wkrj4LccckQ; _cs_c=0; _cs_id=9566bfd8-1a78-a240-f0bb-e8015b3551ba.1556892869.3.1578131399.1578131399.1.1591056869072; visid_incap_441619=vrnUei+7RLiL2Xr3UUmTzfgij14AAAAAQUIPAAAAAABOtZUZlXTnCzjXe1PMdHUQ; visid_incap_1722501=z8YspOTjRLmNxY1jMdqc2voij14AAAAAQUIPAAAAAAAz5k9o0TPe5INp8+VLBGMZ; FRONTONE_USER=1589030911; FRONTONE_SESSID=b63750e3dfbafa4034d6cf3e8d2d558c; FRONTONE_SESSION_ID=e63380316c097c37050207ec718741fff9259edc; nlbi_441619=ufhBSxHyMEoXfsE3Jv8P3AAAAABTP2fpV1zP/JtDBdulhzAa; incap_ses_766_441619=MtovSnQkoT9/JNpoFmKhCqEbkF4AAAAAc7N3y/70ukqqav4TtYvpDQ==; pageCounterCrfOne=1; QueueITAccepted-SDFrts345E-V3_prodevent=EventId%3Dprodevent%26QueueId%3D54e303e1-7614-444d-8c92-dbdad2d61b4a%26RedirectType%3Dsafetynet%26IssueTime%3D1586502577%26Hash%3D21030c8a62ca512d24f5dcbcaacc1f41b3c042a6999d987071870a39842d6678
         dnt: 1
         pragma: no-cache
-        referer: https://www.carrefour.fr/promotions?noRedirect=1&page={i}
+        referer: https://www.carrefour.fr/promotions?noRedirect=1&page={i+1}
         sec-fetch-dest: empty
         sec-fetch-mode: cors
         sec-fetch-site: same-origin

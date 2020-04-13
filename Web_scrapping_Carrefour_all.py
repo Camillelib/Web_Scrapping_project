@@ -286,7 +286,7 @@ if __name__ == '__main__':
         df_final=scrapping_promotions()
         df_final=resetting_index(df_final)
         df_final=clean_cat(df_final)
-        df_final=renaming_col(df_final)
+        df_final=renaming_col_promotions(df_final)
         df_group=group_category_promotions(df_final)
         save_df_promotions()
         #graphs

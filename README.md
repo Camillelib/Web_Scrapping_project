@@ -1,4 +1,4 @@
-# Project: Web Scrapping
+# Project: Web Scraping
 Scraping data from a website using python
 
 
@@ -26,7 +26,7 @@ The objective is to scrap data from https://www.carrefour.fr for all pages and s
 - Deciding which type of page to scrap: products or promotions
 - For products, choosing a category to scrap
 - Counting the number of pages with BeautifulSoup
-- Scrapping all the pages with json (API) on a timer
+- Scraping all the pages with json (API) on a timer
 - Cleaning the data obtained into a single dataframe with pandas
 - Analysing the data obtained: 
   - For product categories: what subcategories are the most represented, what are the top 10 brands selling products on Carrefour.com?
